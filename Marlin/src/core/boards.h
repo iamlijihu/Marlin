@@ -475,6 +475,9 @@
 #define BOARD_BLACKBEEZMINI_V1        5251  // BlackBeezMini V1 (STM32F401CCU6)
 #define BOARD_XTLW_CLIMBER_8TH        5252  // XTLW Climber-8th (STM32F407VGT6)
 #define BOARD_FLY_RRF_E3_V1           5253  // Fly RRF E3 V1.0 (STM32F407VG)
+#define BOARD_FLY_D8                  5254  // FLY D8 (STM32F407VG)
+#define BOARD_FLY_SUPER8              5255  // FLY SUPER8 (STM32F407ZGT6)
+
 
 //
 // Other ARM Cortex-M4
@@ -498,6 +501,9 @@
 #define BOARD_BTT_KRAKEN_V1_0         6010  // BigTreeTech Kraken v1.0 (STM32H723ZG)
 #define BOARD_TEENSY41                6011  // Teensy 4.1
 #define BOARD_T41U5XBB                6012  // T41U5XBB Teensy 4.1 breakout board
+#define BOARD_FLY_D8_PRO              6013  // FLY_D8_PRO (STM32H723VG)
+#define BOARD_FLY_SUPER8_PRO          6014  // FLY SUPER8 PRO (STM32H723ZG)
+
 
 //
 // Espressif ESP32 WiFi

@@ -849,6 +849,10 @@
   #include "stm32f4/pins_XTLW_CLIMBER_8TH.h"        // STM32F4                              env:XTLW_CLIMBER_8TH
 #elif MB(FLY_RRF_E3_V1)
   #include "stm32f4/pins_FLY_RRF_E3_V1.h"           // STM32F4                              env:FLY_RRF_E3_V1
+#elif MB(FLY_D8)
+  #include "stm32f4/pins_FLY_D8.h"                  // STM32F4                              env:FLY_D8
+#elif MB(FLY_SUPER8)
+  #include "stm32f4/pins_FLY_SUPER8.h"              // STM32F4                              env:FLY_SUPER8
 
 //
 // Other ARM Cortex-M4
@@ -883,6 +887,10 @@
   #include "stm32h7/pins_BTT_MANTA_M8P_V2_0.h"      // STM32H7                              env:STM32H723ZE_btt
 #elif MB(BTT_KRAKEN_V1_0)
   #include "stm32h7/pins_BTT_KRAKEN_V1_0.h"         // STM32H7                              env:STM32H723ZG_btt
+#elif MB(FLY_D8_PRO)
+  #include "stm32h7/pins_FLY_D8_PRO.h"              // STM32H7                              env:FLY_D8_PRO
+#elif MB(FLY_SUPER8_PRO)
+  #include "stm32h7/pins_FLY_SUPER8_PRO.h"          // STM32H7                              env:FLY_SUPER8_PRO
 #elif MB(TEENSY41)
   #include "teensy4/pins_TEENSY41.h"                // Teensy-4.x                           env:teensy41
 #elif MB(T41U5XBB)
