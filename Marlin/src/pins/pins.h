@@ -586,6 +586,10 @@
   #include "stm32f0/pins_MALYAN_M200_V2.h"          // STM32F0                              env:STM32F070RB_malyan env:STM32F070CB_malyan
 #elif MB(MALYAN_M300)
   #include "stm32f0/pins_MALYAN_M300.h"             // STM32F0                              env:malyan_M300
+#elif MB(FLY_D5)
+  #include "stm32f0/pins_FLY_D5.h"                   // STM32F0                             env:FLY_D5
+#elif MB(FLY_D7)
+  #include "stm32f0/pins_FLY_D7.h"                   // STM32F0                             env:FLY_D7
 
 //
 // STM32 ARM Cortex-M3
