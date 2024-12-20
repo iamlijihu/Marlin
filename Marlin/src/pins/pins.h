@@ -891,6 +891,8 @@
   #include "stm32h7/pins_FLY_D8_PRO.h"              // STM32H7                              env:FLY_D8_PRO
 #elif MB(FLY_SUPER8_PRO)
   #include "stm32h7/pins_FLY_SUPER8_PRO.h"          // STM32H7                              env:FLY_SUPER8_PRO
+#elif MB(FLY_SUPER5_PRO)
+  #include "stm32h7/pins_FLY_SUPER5_PRO.h"          // STM32H7                              env:FLY_SUPER5_PRO  
 #elif MB(TEENSY41)
   #include "teensy4/pins_TEENSY41.h"                // Teensy-4.x                           env:teensy41
 #elif MB(T41U5XBB)
