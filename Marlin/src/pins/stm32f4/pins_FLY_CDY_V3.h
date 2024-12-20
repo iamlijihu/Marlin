@@ -183,10 +183,14 @@
 // Onboard SD support
 //
 #ifndef SDCARD_CONNECTION
-  #define SDCARD_CONNECTION              LCD
+  #define SDCARD_CONNECTION              ONBOARD
 #endif
 
-#if SD_CONNECTION_IS(LCD)
+#if SD_CONNECTION_IS(ONBOARD)
+
+  #define ONBOARD_SDIO                            // Use SDIO for onboard SD
+
+#elif SD_CONNECTION_IS(LCD)
 
   #define SD_SCK_PIN                 EXP2_02_PIN
   #define SD_MISO_PIN                EXP2_01_PIN
@@ -305,4 +309,3 @@
   #endif
 
 #endif // HAS_WIRED_LCD
-
