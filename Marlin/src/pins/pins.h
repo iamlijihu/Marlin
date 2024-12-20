@@ -853,6 +853,8 @@
   #include "stm32f4/pins_FLY_D8.h"                  // STM32F4                              env:FLY_D8
 #elif MB(FLY_SUPER8)
   #include "stm32f4/pins_FLY_SUPER8.h"              // STM32F4                              env:FLY_SUPER8
+#elif MB(FLY_CDY_V3)
+  #include "stm32f4/pins_FLY_CDY_V3.h"              // STM32F4                              env:FLY_CDY_V3
 
 //
 // Other ARM Cortex-M4

@@ -477,7 +477,7 @@
 #define BOARD_FLY_RRF_E3_V1           5253  // Fly RRF E3 V1.0 (STM32F407VG)
 #define BOARD_FLY_D8                  5254  // FLY D8 (STM32F407VG)
 #define BOARD_FLY_SUPER8              5255  // FLY SUPER8 (STM32F407ZGT6)
-
+#define BOARD_FLY_CDY_V3              5256  // FLY CDY V3 (STM32F407VGT6)
 
 //
 // Other ARM Cortex-M4

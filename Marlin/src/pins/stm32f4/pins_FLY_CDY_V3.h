@@ -24,7 +24,7 @@
 #define ALLOW_STM32DUINO
 #include "env_validate.h"
 
-#define BOARD_INFO_NAME      "FLY D8"
+#define BOARD_INFO_NAME      "FLY CDY V3"
 #define DEFAULT_MACHINE_NAME BOARD_INFO_NAME
 
 // Avoid conflict with fans and TIMER_TONE
@@ -60,91 +60,81 @@
 //
 // Limit Switches
 //
-#define X_MIN_PIN                           PD9
-#define X_MAX_PIN                           PD8
+#define X_MIN_PIN                           PC7
+#define X_MAX_PIN                           PC6
 #define Y_MIN_PIN                           PD11
 #define Y_MAX_PIN                           PD10
-#define Z_MIN_PIN                           PA5
-#define Z_MAX_PIN                           PA4
+#define Z_MIN_PIN                           PB10
+#define Z_MAX_PIN                           PB11
+
+//
+// Laser
+//
+#define SPINDLE_LASER_PWM_PIN               PB9
 
 //
 // NEOPIXEL
 //
-//#define NEOPIXEL_PIN                        PA3
-#define NEOPIXEL2_PIN                       PD15
+// #define NEOPIXEL_PIN                        PD15
 
 //
 // Z Probe (when not Z_MIN_PIN)
 //
-#define Z_MIN_PROBE_PIN                     PC0  // Z3_PIN
+#define Z_MIN_PROBE_PIN                     PC2
 
 //
 // Steppers
 //
 
 #define X_STEP_PIN                          PE5
-#define X_DIR_PIN                           PA8
-#define X_ENABLE_PIN                        PA15
+#define X_DIR_PIN                           PC0
+#define X_ENABLE_PIN                        PC1
 #ifndef X_CS_PIN
-  #define X_CS_PIN                          PC9
+  #define X_CS_PIN                          PC15
 #endif
 
 #define Y_STEP_PIN                          PE4
-#define Y_DIR_PIN                           PC11
-#define Y_ENABLE_PIN                        PC12
+#define Y_DIR_PIN                           PC13
+#define Y_ENABLE_PIN                        PC14
 #ifndef Y_CS_PIN
-  #define Y_CS_PIN                          PC10
+  #define Y_CS_PIN                          PA8
 #endif
 
 #define Z_STEP_PIN                          PE3
-#define Z_DIR_PIN                           PD1
-#define Z_ENABLE_PIN                        PD2
+#define Z_DIR_PIN                           PB7
+#define Z_ENABLE_PIN                        PB8
 #ifndef Z_CS_PIN
-  #define Z_CS_PIN                          PD0
+  #define Z_CS_PIN                          PB6
 #endif
 
 #define E0_STEP_PIN                         PE2
-#define E0_DIR_PIN                          PD4
-#define E0_ENABLE_PIN                       PD5
+#define E0_DIR_PIN                          PD6
+#define E0_ENABLE_PIN                       PD7
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN                         PD3
+  #define E0_CS_PIN                         PD5
 #endif
 
 #define E1_STEP_PIN                         PE1
-#define E1_DIR_PIN                          PD7
-#define E1_ENABLE_PIN                       PB6
+#define E1_DIR_PIN                          PD3
+#define E1_ENABLE_PIN                       PD4
 #ifndef E1_CS_PIN
-  #define E1_CS_PIN                         PD6
+  #define E1_CS_PIN                         PD1
 #endif
 
 #define E2_STEP_PIN                         PE0
-#define E2_DIR_PIN                          PC13
-#define E2_ENABLE_PIN                       PC14
+#define E2_DIR_PIN                          PA15
+#define E2_ENABLE_PIN                       PD0
 #ifndef E2_CS_PIN
-  #define E2_CS_PIN                         PB7
-#endif
-
-#define E3_STEP_PIN                         PE7
-#define E3_DIR_PIN                          PE11
-#define E3_ENABLE_PIN                       PE10
-#ifndef E3_CS_PIN
-  #define E3_CS_PIN                         PC15
-#endif
-
-#define E4_STEP_PIN                         PE8
-#define E4_DIR_PIN                          PA7
-#define E4_ENABLE_PIN                       PA6
-#ifndef E4_CS_PIN
-  #define E4_CS_PIN                         PE9
+  #define E2_CS_PIN                         PE9
 #endif
 
 //
 // Temperature Sensors
 //
-#define TEMP_0_PIN                          PC2   // Analog Input
-#define TEMP_1_PIN                          PC3   // Analog Input
-#define TEMP_2_PIN                          PC4   // Analog Input
-#define TEMP_BED_PIN                        PC5   // Analog Input
+#define TEMP_0_PIN                          PA3   // Analog Input
+#define TEMP_1_PIN                          PC4   // Analog Input
+#define TEMP_2_PIN                          PC5   // Analog Input
+#define TEMP_BED_PIN                        PB1   // Analog Input
 
 
 //
@@ -157,46 +147,41 @@
 
 
 
-#define FAN0_PIN                          PA0
+#define FAN0_PIN                            PA0
 #define FAN1_PIN                            PA1
 #define FAN2_PIN                            PA2
-#define FAN3_PIN                            PC6
-#define FAN4_PIN                            PC7
-#define FAN5_PIN                            PC8
 
 /**
  *        ------                ------
- *  PB10 | 1  2 | PB1     PB14 | 1  2 | PB13
- *  PA14 | 3  4 | PA13    PA9  | 3  4 | PB12
- *  PE15   5  6 | PE14    PA10   5  6 | PB15
- *  PE13 | 7  8 | PB11    PE12 | 7  8 | RESET
+ *  NC   | 1  2 | PA9     PA6  | 1  2 | PA5
+ *  PB2  | 3  4 | PA10    PD8  | 3  4 | PA4
+ *  PE15   5  6 | PE14    PD9    5  6 | PA7
+ *  PA13 | 7  8 | PA14    PE13 | 7  8 | RESET
  *   GND | 9 10 | 5V       GND | 9 10 | --
  *        ------                ------
  *         EXP1                  EXP2
  */
-#define EXP1_01_PIN                         PB10
-#define EXP1_02_PIN                         PB1
-#define EXP1_03_PIN                         PA14
-#define EXP1_04_PIN                         PA13
+#define EXP1_01_PIN                         -1    //NC
+#define EXP1_02_PIN                         PA9
+#define EXP1_03_PIN                         PB2
+#define EXP1_04_PIN                         PA10
 #define EXP1_05_PIN                         PE15
 #define EXP1_06_PIN                         PE14
-#define EXP1_07_PIN                         PE13
-#define EXP1_08_PIN                         PB11
+#define EXP1_07_PIN                         PA13
+#define EXP1_08_PIN                         PA14
 
-#define EXP2_01_PIN                         PB14
-#define EXP2_02_PIN                         PB13
-#define EXP2_03_PIN                         PA9
-#define EXP2_04_PIN                         PB12
-#define EXP2_05_PIN                         PA10
-#define EXP2_06_PIN                         PB15
-#define EXP2_07_PIN                         PE12
+#define EXP2_01_PIN                         PA6
+#define EXP2_02_PIN                         PA5
+#define EXP2_03_PIN                         PD8
+#define EXP2_04_PIN                         PA4
+#define EXP2_05_PIN                         PD9
+#define EXP2_06_PIN                         PA7
+#define EXP2_07_PIN                         PE13
 #define EXP2_08_PIN                         -1    // RESET
 
 //
 // Onboard SD support
 //
-//#define SD_CARD_DETECT_PIN                PC13
-
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION              LCD
 #endif
@@ -229,14 +214,12 @@
 //
 
 #if HAS_TMC_UART
-  #define X_SERIAL_TX_PIN                   PC9
-  #define Y_SERIAL_TX_PIN                   PC10
-  #define Z_SERIAL_TX_PIN                   PD0
-  #define E0_SERIAL_TX_PIN                  PD3
-  #define E1_SERIAL_TX_PIN                  PD6
-  #define E2_SERIAL_TX_PIN                  PB7
-  #define E3_SERIAL_TX_PIN                  PC15
-  #define E4_SERIAL_TX_PIN                  PE9
+  #define X_SERIAL_TX_PIN                   PC15
+  #define Y_SERIAL_TX_PIN                   PA8
+  #define Z_SERIAL_TX_PIN                   PB6
+  #define E0_SERIAL_TX_PIN                  PD5
+  #define E1_SERIAL_TX_PIN                  PD1
+  #define E2_SERIAL_TX_PIN                  PE9
 #endif
 
 //
