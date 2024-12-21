@@ -145,9 +145,6 @@
 #define TEMP_2_PIN                          PC5   // Analog Input
 #define TEMP_BED_PIN                        PB0   // Analog Input
 
-#define TEMP_3_PIN                          PC3   // Analog Input
-#define TEMP_4_PIN                          PC5   // Analog Input
-
 //
 // Heaters / Fans
 //
@@ -155,10 +152,6 @@
 #define HEATER_1_PIN                        PD13
 #define HEATER_2_PIN                        PD14
 #define HEATER_BED_PIN                      PB1
-
-#define HEATER_3_PIN                        PD13
-#define HEATER_4_PIN                        PD14
-
 
 #define FAN0_PIN                            PA1
 #define FAN1_PIN                            PA2
@@ -198,8 +191,6 @@
 //
 // Onboard SD support
 //
-//#define SD_CARD_DETECT_PIN                PC13
-
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION              LCD
 #endif

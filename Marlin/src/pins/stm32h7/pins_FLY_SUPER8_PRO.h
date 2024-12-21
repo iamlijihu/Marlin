@@ -165,10 +165,10 @@
 #define FAN3_PIN                            PA3
 #define FAN4_PIN                            PA15
 #define FAN5_PIN                            PB11
-#define FAN8_PIN                            PB10
-#define FAN9_PIN                            PD12
-#define FAN6_PIN                            PD14
-#define FAN7_PIN                            PD15
+#define FAN6_PIN                            PB10
+#define FAN7_PIN                            PD12
+#define FAN8_PIN                            PD14
+#define FAN9_PIN                            PD15
 
 /**
  *        ------                ------
@@ -201,8 +201,6 @@
 //
 // Onboard SD support
 //
-//#define SD_CARD_DETECT_PIN                PC13
-
 #ifndef SDCARD_CONNECTION
   #define SDCARD_CONNECTION              LCD
 #endif
@@ -210,7 +208,6 @@
 #if SD_CONNECTION_IS(ONBOARD)
 
   #define ONBOARD_SDIO                            // Use SDIO for onboard SD
-
 
 #elif SD_CONNECTION_IS(LCD)
 
@@ -334,12 +331,6 @@
   #endif
 
 #endif // HAS_WIRED_LCD
-
-//
-// Filament runout
-//
-
-#define FIL_RUNOUT_PIN                      PA8
 
 // Alter timing for graphical display
 #if IS_U8GLIB_ST7920

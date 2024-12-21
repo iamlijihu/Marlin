@@ -157,7 +157,7 @@
 
 
 
-#define FAN0_PIN                          PA0
+#define FAN0_PIN                            PA0
 #define FAN1_PIN                            PA1
 #define FAN2_PIN                            PA2
 #define FAN3_PIN                            PC6
